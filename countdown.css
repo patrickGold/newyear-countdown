@@ -1,0 +1,140 @@
+/*! countdown.css
+ * This stylesheet contains the style for the 'newyear-countdown'
+ * project.
+ *
+ * Z-index order:
+ * 0    Body
+ * 1    Background
+ * 2    Countdown
+ */
+
+/* --< Basic Style >-- */
+html,body{height:100%;}
+body{
+    background-color: #043652;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+/* --< The Countdown >-- */
+@-moz-keyframes cd-flowin{
+    0%{
+        opacity: 0;
+        -moz-transform: translate(-50%, -50%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        -moz-transform: translate(-50%, -50%) scale(1);
+    }
+}
+@-o-keyframes cd-flowin{
+    0%{
+        opacity: 0;
+        -o-transform: translate(-50%, -50%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        -o-transform: translate(-50%, -50%) scale(1);
+    }
+}
+@-webkit-keyframes cd-flowin{
+    0%{
+        opacity: 0;
+        -webkit-transform: translate(-50%, -50%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translate(-50%, -50%) scale(1);
+    }
+}
+@keyframes cd-flowin{
+    0%{
+        opacity: 0;
+        -ms-transform: translate(-50%, -50%) scale(0);
+        -moz-transform: translate(-50%, -50%) scale(0);
+        -o-transform: translate(-50%, -50%) scale(0);
+        -webkit-transform: translate(-50%, -50%) scale(0);
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100%{
+        opacity: 1;
+        -ms-transform: translate(-50%, -50%) scale(1);
+        -moz-transform: translate(-50%, -50%) scale(1);
+        -o-transform: translate(-50%, -50%) scale(1);
+        -webkit-transform: translate(-50%, -50%) scale(1);
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+#cd{
+    -moz-animation: cd-flowin 4s ease 1s forwards;
+    -o-animation: cd-flowin 4s ease 1s forwards;
+    -webkit-animation: cd-flowin 4s ease 1s forwards;
+    animation: cd-flowin 4s ease 1s forwards;
+    display: inline-block;
+    left: 50%;
+    opacity: 0;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+}
+#cd > ._cd-title{
+    color: rgb(235,235,235);
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 2.2em;
+    font-weight: 700;
+}
+#cd > ._cd-ele{
+    color: #fff;
+    display: inline-block;
+    padding: .5em 1em;
+}
+#cd > ._cd-ele > ._cd-ele-value{
+    display: block;
+    font-size: 3.1em;
+}
+#cd > ._cd-ele > ._cd-ele-name{
+    font-size: 0.85em;
+    font-style: italic;
+}
+#cd > ._cd-ele.secs{
+    color: #f00;
+}
+
+/* --< Background >-- */
+#background{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+#background *{
+    position: fixed;
+}
+#bg-moon{
+    right: 2%;
+    top: 2%;
+}
+#bg-grass{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#bg-city{
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#bg-cloud1{
+    left: 10%;
+    top: 11%;
+}
+#bg-cloud2{
+    left: 70%;
+    top: 23%;
+}
