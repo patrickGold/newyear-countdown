@@ -11,7 +11,7 @@
 /* --< Basic Style >-- */
 html,body{height:100%;}
 body{
-    background-color: #043652;
+    background-color: #122;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -79,6 +79,9 @@ body{
     position: fixed;
     text-align: center;
     top: 50%;
+    width: 90%;
+    max-width: 500px;
+    z-index: 2;
 }
 #cd > ._cd-title{
     color: rgb(235,235,235);
@@ -87,9 +90,10 @@ body{
     font-weight: 700;
 }
 #cd > ._cd-ele{
+    box-sizing: border-box;
     color: #fff;
     display: inline-block;
-    padding: .5em 1em;
+    padding: 5% 3.5%;
 }
 #cd > ._cd-ele > ._cd-ele-value{
     display: block;
@@ -100,7 +104,10 @@ body{
     font-style: italic;
 }
 #cd > ._cd-ele.secs{
-    color: #f00;
+    color: rgb(87, 163, 0);
+}
+#cd > ._cd-timetil{
+    margin-top: 2%;
 }
 
 /* --< Background >-- */
