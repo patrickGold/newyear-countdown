@@ -32,7 +32,7 @@ window.onload = function(){
             hours = Math.floor(dif%_day/_hour),
             mins = Math.floor(dif%_hour/_min);
             secs = Math.floor(dif%_min/_sec);
-        elements.cd_days.innerHTML = ("00" + days).slice(-2);
+        elements.cd_days.innerHTML = ("000" + days).slice(-3);
         elements.cd_days.nextElementSibling.innerHTML = "Day" + (days == 1 ? "" : "s");
         elements.cd_hours.innerHTML = ("00" + hours).slice(-2);
         elements.cd_hours.nextElementSibling.innerHTML = "Hour" + (hours == 1 ? "" : "s");
