@@ -13,7 +13,7 @@ window.onload = function(){
     elements.cd_title.innerHTML += " " + ((new Date()).getFullYear()+1);
 
     // Current year + 1, Jan, 1st
-    var endDate = new Date((new Date()).getFullYear() + 1 + "-1-1"),
+    var endDate = new Date((new Date()).getFullYear() + 1 + "/1/1"),
         _sec = 1000,
         _min = _sec*60,
         _hour = _min*60,
