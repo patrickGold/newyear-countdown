@@ -85,7 +85,7 @@ body{
 }
 #cd > ._cd-title{
     color: rgb(235,235,235);
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive, sans-serif;
     font-size: 2.2em;
     font-weight: 700;
 }
