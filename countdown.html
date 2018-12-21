@@ -10,23 +10,17 @@
 </head>
 
 <body>
-    <div id="background">
-        <svg id="bg-moon" height="100" width="100">
+    <div id="bg">
+        <svg id="bg__moon" height="100" width="100">
             <circle cx="50" cy="50" r="35" fill="lightblue" />
         </svg>
-        <svg id="bg-city" height="95" width="500">
-            <path d="M0,90 L0,75 L25,75 L25,55 L60,50 L60,60 L75,60 L75,0 L85,0 L85,65 L97,65 L97,35 L105,35 
-                    L105,50 L110,50 L110,45 L119,45 L119,25 L130,25 L130,5 L148,5 L148,72 L156,72 L176,45 L196,72 L211,72 
-                    L211,52 L217,52 L217,60 L225,60 L225,31 L241,31 L241,39 L250,39 L250,47 L261,47 L261,11 L270,11 L270,65
-                    L281,65 L281,80 L300,80 L300,51 L312,45 L312,50 L320,50 L320,9 L332,9 L332,35 L340,35 L340,0 L353,0 L353,50
-                    L365,50 L365,58 L378,58 L378,36 L385,36 L385,42 L391,42 L391,29 L400,29 L400,55 L410,55 L410,65 L415,70
-                    L420,65 L425,70 L430,65 L435,70 L435,77 L450,77 L450,60 L461,60 L461,45 L473,45 L473,80 L475,80 L479,80
-                    L479,70 L490,75 L500,75 L500,90 Z" fill="#d4d4d4" />
+        <svg id="bg__city" height="95" width="500">
+            <path d="M0,90 L0,75 L25,75 L25,55 L60,50 L60,60 L75,60 L75,0 L85,0 L85,65 L97,65 L97,35 L105,35 L105,50 L110,50 L110,45 L119,45 L119,25 L130,25 L130,5 L148,5 L148,72 L156,72 L176,45 L196,72 L211,72 L211,52 L217,52 L217,60 L225,60 L225,31 L241,31 L241,39 L250,39 L250,47 L261,47 L261,11 L270,11 L270,65 L281,65 L281,80 L300,80 L300,51 L312,45 L312,50 L320,50 L320,9 L332,9 L332,35 L340,35 L340,0 L353,0 L353,50 L365,50 L365,58 L378,58 L378,36 L385,36 L385,42 L391,42 L391,29 L400,29 L400,55 L410,55 L410,65 L415,70 L420,65 L425,70 L430,65 L435,70 L435,77 L450,77 L450,60 L461,60 L461,45 L473,45 L473,80 L475,80 L479,80 L479,70 L490,75 L500,75 L500,90 Z" fill="#d4d4d4" />
         </svg>
-        <svg id="bg-grass" height="10" width="650">
+        <svg id="bg__grass" height="10" width="650">
             <path d="M0,10 L40,0 L610,0 L650,10 z" fill="rgb(87, 163, 0)" />
         </svg>
-        <svg id="bg-cloud1" height="100" width="200">
+        <svg id="bg__cloud1" height="100" width="200">
             <g fill="#2a4b6f">
                 <path d="M40,50 L40,100 L160,100 L160,50 Z" />
                 <circle cx="40" cy="71" r="29" />
@@ -35,8 +29,17 @@
                 <circle cx="160" cy="68" r="32" />
             </g>
         </svg>
-        <svg id="bg-cloud2" height="100" width="200">
-            <g fill="#2a4b6f">
+        <svg id="bg__cloud2" height="100" width="200">
+            <g fill="#3a4b6f">
+                <path d="M40,50 L40,100 L160,100 L160,50 Z" />
+                <circle cx="40" cy="71" r="29" />
+                <circle cx="65" cy="50" r="22" />
+                <circle cx="110" cy="50" r="45" />
+                <circle cx="160" cy="68" r="32" />
+            </g>
+        </svg>
+        <svg id="bg__cloud3" height="100" width="200">
+            <g fill="#1a4b6f">
                 <path d="M40,50 L40,100 L160,100 L160,50 Z" />
                 <circle cx="40" cy="71" r="29" />
                 <circle cx="65" cy="50" r="22" />
@@ -47,25 +50,28 @@
     </div>
 
     <div id="cd">
-        <h1 class="_cd-title" id="cd-title">NewYear Countdown</h1>
-        <div class="_cd-ele">
-            <span class="_cd-ele-value" id="cd-days">??</span>
-            <span class="_cd-ele-name">Days</span>
+        <h1 class="cd__title" id="cd-title">NewYear Countdown</h1>
+        <div class="cd__ele">
+            <span class="cd__ele__value" id="cd-days">??</span>
+            <span class="cd__ele__name">Days</span>
         </div>
-        <div class="_cd-ele">
-            <span class="_cd-ele-value" id="cd-hours">??</span>
-            <span class="_cd-ele-name">Hours</span>
+        <div class="cd__ele">
+            <span class="cd__ele__value" id="cd-hours">??</span>
+            <span class="cd__ele__name">Hours</span>
         </div>
-        <div class="_cd-ele">
-            <span class="_cd-ele-value" id="cd-mins">??</span>
-            <span class="_cd-ele-name">Minutes</span>
+        <div class="cd__ele">
+            <span class="cd__ele__value" id="cd-mins">??</span>
+            <span class="cd__ele__name">Minutes</span>
         </div>
-        <div class="_cd-ele secs">
-            <span class="_cd-ele-value" id="cd-secs">??</span>
-            <span class="_cd-ele-name">Seconds</span>
+        <div class="cd__ele cd__ele--secs">
+            <span class="cd__ele__value" id="cd-secs">??</span>
+            <span class="cd__ele__name">Seconds</span>
         </div>
-        <div class="_cd-timetil" id="cd-timetil">Time until ??</div>
+        <div class="cd__timetil" id="cd-timetil">Time until ??</div>
     </div>
+    <a href="https://github.com/patrickgold/newyear-countdown" target="_blank">
+        <img style="position: absolute; top: 0; left: 0; border: 0; z-index: 100" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub">
+    </a>
 </body>
 
 </html>

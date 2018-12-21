@@ -1,0 +1,150 @@
+/*!countdown.css
+ * This stylesheet contains the style for the 'newyear-countdown'
+ * project.
+ *
+ * Z-index order:
+ * 0    Body
+ * 1    Background
+ * 2    Countdown
+ */
+
+$body_bgcolor: #001326;
+$body_fgcolor: #fff;
+$body_fontfamily: 'Courier New', Courier, monospace;
+$cd_title_fontfamily: "Comic Sans", "Comic Sans MS", "Chalkboard", "ChalkboardSE-Regular", cursive, sans-serif;
+
+/* --< Basic Style >-- */
+html,body{height:100%;}
+body {
+    background-color: $body_bgcolor;
+    color: $body_fgcolor;
+    font-family: $body_fontfamily;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+
+/* --< The Countdown >-- */
+@keyframes cd-flowin {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+@keyframes cd-new-year-title {
+    0% {
+        color: red;
+    }
+    50% {
+        color: blue;
+    }
+    100% {
+        color: green;
+    }
+}
+@keyframes bg-move-cloud {
+    0% {
+        left: -250px;
+    }
+    100% {
+        left: 105%;
+    }
+}
+@keyframes bg-pulse-moon {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+#cd {
+    animation: cd-flowin 4s ease 1s forwards;
+    display: inline-block;
+    left: 50%;
+    opacity: 0;
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    width: 90%;
+    max-width: 500px;
+    z-index: 2;
+
+    .cd__title {
+        color: rgb(235,235,235);
+        font-family: $cd_title_fontfamily;
+        font-size: 2.2em;
+        font-weight: 700;
+        transition: all 1s;
+    }
+    .cd__title.cd__title--newyear {
+        animation: cd-new-year-title 3s ease alternate infinite;
+    }
+    .cd__ele {
+        box-sizing: border-box;
+        color: #fff;
+        display: inline-block;
+        padding: 5% 3.5%;
+        
+        .cd__ele__value {
+            display: block;
+            font-size: 3.1em;
+        }
+        .cd__ele__name {
+            font-size: 0.85em;
+            font-style: italic;
+        }
+    }
+    .cd__ele--secs {
+        color: rgb(87, 163, 0);
+    }
+    .cd__timetil {
+        margin-top: 2%;
+    }
+}
+
+/* --< Background >-- */
+#bg {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+}
+#bg * {
+    position: fixed;
+}
+#bg__moon {
+    animation: bg-pulse-moon 4s linear 0s alternate infinite;
+    right: 2%;
+    top: 2%;
+}
+#bg__grass {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#bg__city {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#bg__cloud1 {
+    animation: bg-move-cloud 48s linear -12s alternate infinite;
+    top: 9%;
+}
+#bg__cloud2 {
+    animation: bg-move-cloud 60s linear -78s alternate infinite;
+    top: 23%;
+}
+#bg__cloud3 {
+    animation: bg-move-cloud 80s linear -78s alternate infinite;
+    top: 15%;
+}

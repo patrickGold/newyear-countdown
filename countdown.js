@@ -21,12 +21,13 @@ window.onload = function(){
 
     elements.cd_timetil.innerHTML = "Time until " + endDate.toDateString();
 
-    setInterval(function(){
+    var cdInterval = setInterval(function(){
         var nowDate = new Date(),
             dif = endDate.getTime() - nowDate.getTime();
-        if(dif < 0){
-            clearInterval();
+        if (dif <= 0) {
+            elements.cd_title.classList.add("cd__title--newyear");
             elements.cd_title.innerHTML = "Happy New Year!";
+            return clearInterval(cdInterval);
         }
         var days = Math.floor(dif/_day),
             hours = Math.floor(dif%_day/_hour),
